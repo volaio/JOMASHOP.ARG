@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jomashop ARG - Cotizador</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="calculator-container">
+        <h1>Cotizá tu producto de Jomashop en Argentina</h1>
+        <p class="subtitle">Pegá el link del producto y escribí el precio en dólares</p>
+
+        <form id="calculator-form">
+            <input type="url" id="product-url" class="input-field" placeholder="Pegá el enlace del producto" required>
+            <input type="number" id="product-price" class="input-field" placeholder="Ingresá el precio en USD" step="0.01" min="0" required>
+            
+            <div id="error-message"></div>
+
+            <button type="submit" id="calculate-btn">Calcular</button>
+        </form>
+
+        <div class="result-display" id="result-container">
+            Estimado final en USD: <span id="result-value"></span>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
